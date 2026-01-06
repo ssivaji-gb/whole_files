@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .grid-container {
+      /* Basic Grid Setup */
+      /* Establishes a grid formatting context */
+      display: grid;
+      
+      /* Grid Template Properties */
+      /* Defines 3 equal columns using fractional units */
+      grid-template-columns: repeat(5, 1fr);
+      /* Defines row heights (auto-sizing based on content) */
+      grid-template-rows: auto auto;
+
+      /* Grid Gap/Spacing */
+      /* Shorthand for row-gap and column-gap */
+      gap: 10px;
+      /* Spacing between rows */
+      /* row-gap: 55px; */
+      /* Spacing between columns */
+      /* column-gap: 100px; */
+      
+      /* Grid Container Alignment */
+      /* Aligns the grid horizontally within container (start, end, center, stretch, space-around, space-between, space-evenly) */
+      justify-content: start;
+      /* Aligns the grid vertically within container */
+      align-content: start;
+      /* Aligns grid items horizontally within their cells */
+      justify-items: stretch ;
+      /* Aligns grid items vertically within their cells */
+      align-items: stretch;
+      
+      
+      /* Grid Auto Properties */
+      /* Size of implicitly created columns */
+      grid-auto-columns: 1fr;
+      /* Size of implicitly created rows */
+      grid-auto-rows: minmax(50px, auto);
+      /* How auto-placed items flow (row, column, dense) */
+      grid-auto-flow: row;
+      
+      /* Container Styling */
+      background-color: #f0f0f0;
+      padding: 10px;
+      /* Fixed height to demonstrate alignment properties */
+      height: 400px;
+      /* Fixed width for demo */
+      width: 600px;
+      border: 2px solid #ccc;
+    }
+
+    .grid-item {
+      /* Grid Item Positioning */
+     /* grid-column: 1 / 3;*/
+      /* Span from row line 1 to 2 */
+      /* grid-row: 1 / 8; */
+      
+      /* Grid Item Alignment (overrides container alignment for specific items) */
+      /* Horizontal alignment of this item */
+      /* justify-self: center; */
+      /* Vertical alignment of this item */
+     align-self: center;
+      
+      /* Item Styling */
+      background: lightcoral;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #999;
+      border-radius: 4px;
+    }
+    .grid-item:nth-child(1){
+      grid-row-start: 1;
+      grid-row-end: 1;
+      background-color: yellow;
+    }
+    .grid-item:nth-child(2){
+      /* grid-column: 2/5; */
+    }
+    .grid-item:nth-child(5){
+      /* grid-column: 2/5; */
+    }
+
+    /* Specific Grid Item Examples */
+    .grid-item:nth-child(1) { 
+      /* Start at column line 1 */
+     /* grid-column-start: 1 ; */
+          /* Start at row line 1 */
+      /* grid-row-start: 1; */
+      End at row line 4 (spans all 3 rows)
+      /* grid-row-end: 3; */
+      /* End at column line 4 (spans all 3 columns) */
+    /* grid-column-end: 4;*/
+      background: yellow;
+    }
+    
+    
+
+
+    
+
+  </style>
+</head>
+<body>
+  <h2>Grid Example</h2>
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+  </div>
+</body>
+</html>
+
+<!-- grid-column: 1 / 3; 2 example-->
+ 
+<!-- exaple -->
+      <!--  grid-column-start: 1 ;  -->
+        <!-- grid-column-end: 4; -->
+
+
+<!--/* Specific Grid Item Examples */
+    .grid-item:nth-child(1) { 
+      /* Start at column line 1 */
+      grid-column-start: 1; 
+          /* Start at row line 1 */
+      /* grid-row-start: 1; */
+      /* End at row line 4 (spans all 3 rows) */
+      /* grid-row-end: 3; */
+      /* End at column line 4 (spans all 3 columns) */
+       grid-column-end: 4; 
+      background: lightblue;
+    }
+      4 example-->
+
+      <!--  justify-self:end; 5 example -->
+       <!-- -->
+
+
+
+
+
+      <!--  .grid-item:nth-child(6){
+      background-color: lightcoral;
+    }
+    .grid-item:nth-child(2){
+      grid-column: 2/5;
+    }
+    .grid-item:nth-child(5){
+      grid-column: 2/5;
+    }
+
+    /* Specific Grid Item Examples */
+    .grid-item:nth-child(1) { 
+      /* Start at column line 1 */
+     /* grid-column-start: 1 ; */
+          /* Start at row line 1 */
+      /* grid-row-start: 1; */
+      /* End at row line 4 (spans all 3 rows) */
+      /* grid-row-end: 3; */
+      /* End at column line 4 (spans all 3 columns) */
+    /* grid-column-end: 4;*/
+      background: lightblue;
+    }
+     7 example-->

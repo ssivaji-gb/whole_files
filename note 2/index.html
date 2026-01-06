@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prodmast Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6fbf7;
+      color: #222;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+      padding: 60px 20px;
+    }
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .btn {
+      display: inline-block;
+      background: #7bd389;
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+    .illus {
+      background: #eafcec;
+      border-radius: 12px;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #073a3a;
+    }
+    /* CTA Section */
+    .cta {
+      background: #063433;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .cta h2 {
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+    .cta p {
+      margin-bottom: 20px;
+      color: rgba(255,255,255,0.9);
+    }
+    /* Footer */
+    footer {
+      background: #071013;
+      color: #ccc;
+      padding: 40px 20px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    footer h4 {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    footer a {
+      text-decoration: none;
+      color: #ccc;
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    .copyright {
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+    }
+    /* Responsive */
+    @media(max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media(max-width: 500px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero container">
+    <div>
+      <h1>Empowering Top Companies with Seamless Integrations</h1>
+      <p>Experience seamless connections with our solutions, designed to integrate with your existing systems, enhance productivity, and drive success.</p>
+      <a href="#" class="btn">Work With Us</a>
+    </div>
+    <div class="illus">Integration Icons / Image</div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>From Idea to Production in Days</h2>
+    <p>Accelerate production, reduce downtime and optimise costs. Get a special offer now!</p>
+    <a href="#" class="btn">Work With Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Prodmast</strong>
+        <p>Our solutions make production faster and cheaper. Contact us for more information.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#">About Us</a>
+        <a href="#">Customers</a>
+        <a href="#">Newsroom</a>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <a href="#">Manufacturing Execution System</a>
+        <a href="#">Enterprise Resource Planning</a>
+        <a href="#">Quality Management System</a>
+      </div>
+      <div>
+        <h4>Get In Touch</h4>
+        <a href="mailto:hello@prodmast.com">hello@prodmast.com</a>
+      </div>
+    </div>
+    <div class="copyright">© 2024 Prodmast. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media Queries</title>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            
+        }
+        .item{
+            background-color: aqua;
+            height: 100px;
+            flex-basis: 20%;
+
+        }
+        @media screen and (max-width:601px to 1007px){
+
+           .item{ flex-basis: 40%;
+        background-color: cadetblue;
+        } 
+           
+        }
+        /* @media screen and (max-width:600px){
+
+           .item{ flex-basis: 60%;
+        background-color: rgb(42, 44, 165);
+        } 
+        } */
+        @media screen and (max-width:600px){
+
+           .item{ flex-basis: 60%;
+        background-color: brown;
+        } 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+
+    </div>
+</body>
+</html>

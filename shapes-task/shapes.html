@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Character encoding declaration for proper text rendering -->
+	<meta charset='UTF-8'>
+	
+	<!-- Viewport meta tag for responsive design -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Page title that appears in browser tab -->
+	<title>The Shapes of CSS - Refactored with Comments</title>
+
+	<!-- Modern CSS reset and base styles -->
+	<style>
+		/* ==========================================================================
+		   RESET AND BASE STYLES
+		   ========================================================================== */
+		
+		/* Universal selector to reset default browser styles */
+		* {
+			margin: 0;           /* Remove default margins */
+			padding: 0;          /* Remove default padding */
+			box-sizing: border-box; /* Include padding and border in element's total width and height */
+		}
+
+		/* Base body styling */
+		body {
+			font-family: 'Arial', sans-serif; /* Primary font stack */
+			line-height: 1.6;                 /* Improved readability with line spacing */
+			color: #333;                      /* Dark gray text color */
+			background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Subtle gradient background */
+			min-height: 100vh;               /* Minimum height to fill viewport */
+		}
+
+		/* ==========================================================================
+		   LAYOUT COMPONENTS
+		   ========================================================================== */
+
+		/* Main container for page content */
+		#page-wrap {
+			max-width: 1200px;               /* Maximum width for content */
+			margin: 0 auto;                  /* Center horizontally */
+			padding: 20px;                   /* Inner spacing */
+			background: white;               /* White background */
+			box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+			border-radius: 10px;             /* Rounded corners */
+			margin-top: 20px;                /* Top spacing */
+		}
+
+		/* Main heading styling */
+		h1 {
+			text-align: center;              /* Center align text */
+			margin-bottom: 30px;             /* Bottom spacing */
+			color: #2c3e50;                  /* Dark blue-gray color */
+			font-size: 2.5rem;               /* Large font size */
+			font-weight: bold;               /* Bold font weight */
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Subtle text shadow */
+		}
+
+		/* Span element within h1 for accent styling */
+		h1 span {
+			color: #e74c3c;                  /* Red accent color */
+			text-decoration: underline;      /* Underline decoration */
+			text-decoration-color: #3498db;  /* Blue underline color */
+		}
+
+		/* Description paragraph styling */
+		p {
+			text-align: center;              /* Center align text */
+			margin-bottom: 40px;             /* Bottom spacing */
+			font-size: 1.1rem;               /* Slightly larger font */
+			color: #666;                     /* Medium gray color */
+		}
+
+		/* ==========================================================================
+		   SHAPES GRID LAYOUT
+		   ========================================================================== */
+
+		/* Grid container for all shapes */
+		#shapes {
+			display: grid;                   /* CSS Grid layout */
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+			gap: 30px;                       /* Space between grid items */
+			margin-top: 40px;                /* Top spacing */
+		}
+
+		/* Individual shape container */
+		.shape {
+			background: #fff;                /* White background */
+			padding: 30px;                   /* Inner spacing */
+			border-radius: 12px;             /* Rounded corners */
+			box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Elevation shadow */
+			text-align: center;              /* Center align content */
+			transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animations */
+		}
+
+		/* Hover effect for shape containers */
+		.shape:hover {
+			transform: translateY(-5px);     /* Lift effect on hover */
+			box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* Enhanced shadow on hover */
+		}
+
+		/* Shape heading styling */
+		.shape h2 {
+			margin-bottom: 20px;             /* Bottom spacing */
+			color: #2c3e50;                  /* Dark blue-gray color */
+			font-size: 1.4rem;               /* Medium-large font size */
+			font-weight: 600;                /* Semi-bold weight */
+		}
+
+		/* Links within shape headings */
+		.shape h2 a {
+			font-size: 0.8rem;               /* Smaller font for attribution */
+			color: #3498db;                  /* Blue link color */
+			text-decoration: none;           /* Remove underline */
+			font-weight: normal;             /* Normal font weight */
+		}
+
+		/* Hover effect for attribution links */
+		.shape h2 a:hover {
+			text-decoration: underline;      /* Add underline on hover */
+			color: #2980b9;                  /* Darker blue on hover */
+		}
+
+        
+
+		/* ==========================================================================
+		   SHAPE DEFINITIONS
+		   ========================================================================== */
+	</style>
+</head>
+<body>
+	<div id="page-wrap">
+
+		<h1>The <span>Shapes</span> of CSS</h1>
+
+		<p>All of the below use only a single HTML element with comprehensive CSS comments explaining each property.</p>
+
+		<div id="shapes">
+
+			<!-- BASIC SHAPES -->
+			<div class="shape">
+				<h2>Square</h2>
+				<div id="square"></div>
+				<style>
+					/* Square Shape - Equal width and height */
+					#square {
+						width: 100px;           /* Set width to 100 pixels */
+						height: 100px;          /* Set height to 100 pixels (equal to width for square) */
+						background: #e74c3c;    /* Solid red background color */
+						margin: 20px auto;      /* Center horizontally with auto margins, add vertical spacing */
+						border-radius: 4px;     /* Slightly rounded corners for modern look */
+						transition: all 0.3s ease; /* Smooth transition for hover effects */
+					}
+					
+					/* Hover effect for interactivity */
+					#square:hover {
+						transform: scale(1.1);  /* Scale up by 10% on hover */
+						box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4); /* Add shadow with shape color */
+					}
+				</style>
+			</div>
+
+			<div class="shape">
+				<h2>Rectangle</h2>
+				<div id="rectangle"></div>
+				<style>
+					/* Rectangle Shape - Width greater than height */
+					#rectangle {
+						width: 200px;           /* Set width to 200 pixels */
+						height: 100px;          /* Set height to 100 pixels (half of width for 2:1 ratio) */
+						background: #3498db;    /* Blue background color */
+						margin: 20px auto;      /* Center horizontally with auto margins */
+						border-radius: 6px;     /* Rounded corners */
+						transition: all 0.3s ease; /* Smooth transition for animations */
+					}
+					
+					#rectangle:hover {
+						transform: rotateZ(5deg); /* Slight rotation on hover */
+						background: #2980b9;    /* Darker blue on hover */
+					}
+				</style>
+			</div>
+
+			<div class="shape">
+				<h2>Triangle</h2>
+				<div id="triangle"></div>
+				<style>
+					/* Triangle Shape - Using border trick technique */
+					#triangle {
+						width: 0;               /* No width - triangle created with borders */
+						height: 0;              /* No height - triangle created with borders */
+						margin: 20px auto;      /* Center horizontally with vertical spacing */
+						/* Triangle created using borders - transparent sides, colored bottom */
+						border-left: 50px solid transparent;   /* Left side transparent border */
+						border-right: 50px solid transparent;  /* Right side transparent border */
+						border-bottom: 100px solid #f39c12;    /* Bottom border creates triangle shape */
+						transition: all 0.3s ease; /* Smooth transitions for hover effects */
+					}
+					
+					/* Hover effect */
+					#triangle:hover {
+						transform: translateY(-5px); /* Move up slightly on hover */
+						filter: brightness(1.2);     /* Brighten the color on hover */
+					}
+				</style>
+			</div>
+
+<div class="shape">
+
+					<h2>Heart <a href="http://nicolasgallagher.com/">via Nicolas Gallagher</a></h2>
+
+					<div id="heart"></div>
+
+					<style contenteditable>
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+					</style>
+
+				</div>
+
+			<div class="shape">
+				<h2>Infinity</h2>
+				<div id="infinity"></div>
+				<style>
+					/* Infinity Symbol - Figure-eight shape using pseudo-elements */
+					#infinity {
+						position: relative;     /* Enable positioning for pseudo-elements */
+						width: 212px;           /* Overall width of infinity symbol */
+						height: 100px;          /* Overall height of infinity symbol */
+						margin: 30px auto;      /* Center horizontally with vertical spacing */
+						background: transparent; /* No background for main element */
+					}
+					
+					/* Left circle of infinity using :before pseudo-element */
+					#infinity:before {
+						content: "";            /* Required for pseudo-element */
+						width: 60px;            /* Width of left circle */
+						height: 60px;           /* Height of left circle */
+						position: absolute;     /* Absolute positioning */
+						top: 20px;              /* Vertical center position */
+						left: 0;                /* Left position */
+						border: 20px solid #9b59b6; /* Purple border creates ring */
+						border-radius: 50%;     /* Make it circular */
+						transform: rotate(45deg); /* Rotate for infinity orientation */
+					}
+					
+					/* Right circle of infinity using :after pseudo-element */
+					#infinity:after {
+						content: "";            /* Required for pseudo-element */
+						width: 60px;            /* Width of right circle */
+						height: 60px;           /* Height of right circle */
+						position: absolute;     /* Absolute positioning */
+						top: 20px;              /* Vertical center position */
+						right: 0;               /* Right position */
+						border: 20px solid #9b59b6; /* Purple border creates ring */
+						border-radius: 50%;     /* Make it circular */
+						transform: rotate(-45deg); /* Counter-rotate for infinity orientation */
+					}
+					
+					/* Hover effect for infinity */
+					#infinity:hover {
+						transform: scale(1.1);  /* Scale up entire symbol */
+					}
+					
+					/* Enhance hover with rotation animation */
+					#infinity:hover:before {
+						animation: infinityRotate 2s linear infinite; /* Continuous rotation */
+					}
+					
+					#infinity:hover:after {
+						animation: infinityRotate 2s linear infinite reverse; /* Reverse rotation */
+					}
+					
+					/* Rotation animation for infinity loops */
+					@keyframes infinityRotate {
+						from { transform: rotate(45deg); }
+						to { transform: rotate(405deg); }
+					}
+				</style>
+			</div>
+
+			<div class="shape">
+				<h2>Hexagon</h2>
+				<div id="hexagon"></div>
+				<style>
+					/* Hexagon - Six-sided shape using pseudo-elements and transforms */
+					#hexagon {
+						width: 100px;           /* Base width */
+						height: 55px;           /* Base height (width * 0.55 for proper proportions) */
+						background: #2ecc71;    /* Green background */
+						margin: 50px auto;      /* Center with extra margin for hexagon points */
+						position: relative;     /* Enable positioning for pseudo-elements */
+						border-radius: 6px;     /* Slightly rounded corners */
+						transition: all 0.3s ease; /* Smooth transitions */
+					}
+					
+					/* Top angled part of hexagon using :before pseudo-element */
+					#hexagon:before {
+						content: "";            /* Required for pseudo-element */
+						width: 0;               /* No width - created with borders */
+						height: 0;              /* No height - created with borders */
+						position: absolute;     /* Absolute positioning */
+						top: -25px;             /* Position above main element */
+						left: 0;                /* Align with main element */
+						/* Triangle pointing down to create top of hexagon */
+						border-left: 50px solid transparent;   /* Left transparent border */
+						border-right: 50px solid transparent;  /* Right transparent border */
+						border-bottom: 25px solid #2ecc71;     /* Bottom border creates triangle */
+					}
+					
+					/* Bottom angled part of hexagon using :after pseudo-element */
+					#hexagon:after {
+						content: "";            /* Required for pseudo-element */
+						width: 0;               /* No width - created with borders */
+						height: 0;              /* No height - created with borders */
+						position: absolute;     /* Absolute positioning */
+						bottom: -25px;          /* Position below main element */
+						left: 0;                /* Align with main element */
+						/* Triangle pointing up to create bottom of hexagon */
+						border-left: 50px solid transparent;   /* Left transparent border */
+						border-right: 50px solid transparent;  /* Right transparent border */
+						border-top: 25px solid #2ecc71;        /* Top border creates triangle */
+					}
+					
+					/* Hover effect for hexagon */
+					#hexagon:hover {
+						transform: rotate(30deg) scale(1.1); /* Rotate and scale on hover */
+						background: #27ae60;    /* Darker green on hover */
+					}
+					
+					/* Ensure pseudo-elements rotate with main element */
+					#hexagon:hover:before {
+						border-bottom-color: #27ae60; /* Match hover color */
+					}
+					
+					#hexagon:hover:after {
+						border-top-color: #27ae60; /* Match hover color */
+					}
+				</style>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

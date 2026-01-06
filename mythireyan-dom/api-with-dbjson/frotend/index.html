@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API with db</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .body {
+        height: 100vh;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        display: flex;
+        /* display: none; */
+        justify-content: center;
+        align-items: center;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 30px;
+        width: 320px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      input:focus {
+        border-color: #667eea;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #667eea;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #5a67d8;
+      }
+
+      /* admid dashboard */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* body{
+    background-color: #f4f6f9;
+    padding: 30px;
+    
+} */
+
+      /* main user container */
+      .admin-dashboard {
+        max-width: 800px;
+        margin: auto;
+        display: none;
+        flex-direction: column;
+        /* display: block; */
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      /* users count box */
+      .users-count {
+        background-color: #4f46e5;
+        color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      /* user detail card */
+      .user-detail {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      ol li {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+        gap: 15px;
+        align-items: center;
+      }
+
+      .user-detail h3,
+      .user-detail h4 {
+        color: #444;
+      }
+
+      /* optional role highlight */
+      .role {
+        color: #16a34a;
+        font-weight: bold;
+      }
+
+      /* password style */
+      .Password {
+        color: #dc2626;
+        font-size: 14px;
+      }
+      /* userDashboard */
+      .userDashboard {
+        height: 100vh;
+        display: none;
+        flex-direction: column;
+        /* display: flex; */
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+      }
+
+      .userbacded{
+        width: 30%;
+      }
+
+      .userDashboard h1 {
+        color: #fff;
+        font-size: 3rem;
+        letter-spacing: 3px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body">
+      <form>
+        <label for="username">UserName</label>
+        <input
+          type="text"
+          class="username"
+          name="username"
+          placeholder="Enter the username"
+        />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          class="email"
+          name="email"
+          placeholder="Enter the email ID"
+        />
+        <label for="role">Select Role</label>
+        <select class="role">
+          <option value="">-- Select --</option>
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="password"
+          name="password"
+          placeholder="password"
+        />
+        <button type="submit">submit</button>
+      </form>
+    </div>
+
+    <!-- admin-dashboard -->
+    <div class="admin-dashboard">
+      <h1>Admin Dashboard</h1>
+      <div class="users-count"></div>
+
+      <ol class="user-detail">
+        <li>
+          <h3 class="usernamead">usernamead</h3>
+          <h4 class="email">Email</h4>
+          <h4 class="role">Role</h4>
+          <h4 class="Password">Password</h4>
+        </li>
+      </ol>
+      <button class="adminbacked">BACK</button>
+    </div>
+
+    <!-- userDashboard -->
+    <div class="userDashboard">
+      <h1 class="userDashboard-h1"></h1>
+      <button class="userbacded">BACK</button>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

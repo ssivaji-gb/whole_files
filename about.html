@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sivaji.com</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+/* Body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #F8FAFB;
+  color: #0F172A;
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* Navbar */
+.header {
+  background: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+a  {
+    text-decoration: none;
+}
+.logo {
+  color: #2563EB;
+  
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-list a {
+  text-decoration: none;
+  color: #0F172A;
+  font-weight: 500;
+}
+.nav-list a:hover {
+  color: #2563EB;
+}
+/*--- content---- */
+
+.container{
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
+ width: 100%;
+ padding: 20PX;
+}
+
+.my-photo{
+  border-radius: 10px;
+}
+
+.my-photo img{
+  width: 100%;
+  border-radius: 20px;
+}
+
+.content{
+ display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  align-items: center;
+  text-justify: auto;
+  width: 50%;
+
+}
+
+strong{
+   color: #2563EB;
+}
+
+  </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+  <header class="header">
+    <nav class="navbar">
+      <a  href="index.html"><h2 class="logo">Sathirabathi Sivaji</h2></a>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+<div class="about-section">
+<div class="container">
+  <div class="my-photo">
+    <img src="myp.jpg" alt="sivaji">
+  </div>
+  <div class="content">
+   <h2>About Me</h2>
+    <p>
+      I’m <strong>Sathirabathi Sivaji</strong>, a Fullstack Developer with a background in 
+      <strong>Electronics and Communication Engineering</strong> from 
+      <strong>Central Polytechnic College, Chennai</strong>.
+    </p>
+    <p>
+      During my diploma, I discovered my passion for technology and problem-solving, 
+      which naturally led me into the world of coding. Through campus placement, 
+      I joined <strong>DCKAP Palli</strong>, where I started shaping my career in software development.
+    </p>
+    <p>
+      I enjoy <strong>building end-to-end web applications</strong>, 
+      bringing together clean frontends and strong backend logic. 
+      Outside of coding, I love reading books and listening to music.
+    </p>
+    <p>
+      My ultimate goal is to grow as a <strong>Fullstack Developer</strong> 
+      and contribute to impactful projects that solve real-world problems.
+    </p>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

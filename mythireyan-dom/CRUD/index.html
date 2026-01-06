@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Item Manager</h1>
+        
+        <!-- Form Section -->
+        <div class="form-section">
+            <form id="item-form">
+                <div class="input-group">
+                    <input type="text" id="item-name" placeholder="Enter item name..." required>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Items List Section -->
+        <div class="items-section">
+            <h2>Items <span id="item-count">(0)</span></h2>
+            <ul id="items-container">
+                <li class="empty-message">No items yet. Add your first item above!</li>
+            </ul>
+        </div>
+   
+       <div class="recent"></div>
+     </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+சரி — CSS அநி‍மேஷன் syntax எப்படி பங்கு‌ணுது என்று சுலபமா விளக்குறேன், சுட்டு உதாரணங்களோட.
+
+1) transition (simple, hover-type change)
+
+ஒரு property-ஐ smooth ஆக மாற்ற ஒருங்கிணைப்பு.
+
+.box {
+  width: 200px;
+  height: 100px;
+  background: teal;
+  transition: transform 0.3s ease, background 0.3s;
+}
+.box:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: #2ecc71;
+}
+
+
+transition: property duration timing-function delay
+
+நல்லது: hover-state மட்டும் எடுத்துச்சு simple interactions-க்கு.
+
+2) @keyframes + animation (complex, continuous)
+
+முழு sequence காக பயன்படுத்துவோம்.
+
+@keyframes slide-fade {
+  0%   { transform: translateX(-50px); opacity: 0; }
+  50%  { transform: translateX(10px);  opacity: 1; }
+  100% { transform: translateX(0);     opacity: 1; }
+}
+
+.card {
+  animation-name: slide-fade;
+  animation-duration: 800ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both; /* starts and stays per keyframes */
+  animation-iteration-count: 1; /* ან infinite */
+}
+
+
+சுருக்கமாக:
+
+animation: name duration timing-function delay iteration-count direction fill-mode;
+
+உதாரண shorthand:
+
+.card {
+  animation: slide-fade 0.8s ease-out 0s 1 normal both;
+}
+
+3) Common animation patterns
+
+Fade-in:
+
+@keyframes fadeIn { from {opacity:0} to {opacity:1} }
+.fade { animation: fadeIn 500ms ease-in both; }
+
+
+Infinite pulse:
+
+@keyframes pulse { 0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)} }
+.pulse { animation: pulse 1.5s ease-in-out infinite; }
+
+
+Bounce (simple):
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+.bounce { animation: bounce 0.6s infinite; }
+
+4) animation-fill-mode விளக்கம்
+
+forwards அல்லது both என்றால் final state ஐ animation முடிந்தபின் retain பண்ணும்.
+
+none (default) -> ஆரம்ப நிலைக்கு திரும்பலாம்.
+
+5) Performance tips
+
+Transform (translate/scale/rotate) & opacity — GPU-accelerated, smooth.
+
+Avoid animating layout properties (width/height/left/top) if performance வேண்டும்.
+
+Add will-change: transform; when needed but overuse வேண்டாம.
+
+6) JS-based animations
+
+சாதாரண DOM updates சிக்கல்லைங்க requestAnimationFrame பயன்படுத்தலாம்; அதேவிலே libraries (GSAP, anime.js) complex control தரும்.
+
+கூடுதலாக வேண்டுமா:
+
+ஒரு குறிப்பிட்ட animation (button hover, loader, navbar slide) ஊருக்கு code உப்புருக்கட்டேன்.
+
+அல்லது GIF/SVG animation எப்படி பண்ணனும் சொலனுமா?
+
+நீங்க என்னக்கூட code example வேணும்னா சொல்லுங்க — நான் ஒரு small demo code உடன் தர்றேன்.

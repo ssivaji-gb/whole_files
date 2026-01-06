@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* COMPLETE FLEXBOX REFERENCE - SINGLE CONTAINER WITH ALL PROPERTIES */
+    .flex-container {
+      /* Basic Flexbox Setup */
+      /* Establishes a flex formatting context */
+      display: flex;
+      
+      /* Flex Direction - defines main axis */
+      /* row (default), row-reverse, column, column-reverse */
+      flex-direction: row;
+      
+      /* Flex Wrap - controls wrapping behavior */
+      /* nowrap (default), wrap, wrap-reverse */
+      flex-wrap: wrap;
+      
+      /* Flex Flow - shorthand for direction and wrap */
+      /* flex-flow: row wrap; */
+      
+      /* Main Axis Alignment (horizontal in row direction) */
+      /* flex-start (default), flex-end, center, space-between, space-around, space-evenly */
+      justify-content: space-between;
+      
+      /* Cross Axis Alignment (vertical in row direction) */
+      /* stretch (default), flex-start, flex-end, center, baseline */
+      align-items: center;
+      
+      /* Cross Axis Alignment for wrapped lines */
+      /* stretch (default), flex-start, flex-end, center, space-between, space-around, space-evenly */
+      align-content: flex-start;
+      
+      /* Gap between flex items */
+      /* Shorthand for row-gap and column-gap */
+      gap: 15px;
+      /* Spacing between rows */
+      /* row-gap: 20px; */
+      /* Spacing between columns */
+      /* column-gap: 15px; */
+      
+      /* Container Styling */
+      background-color: #f0f0f0;
+      padding: 20px;
+      /* Fixed height to see alignment effects */
+      height: 400px;
+      /* Fixed width to trigger wrapping */
+      width: 700px;
+      border: 3px solid #333;
+      margin: 20px auto;
+    }
+
+    .flex-item {
+
+      height: 40px;
+      /* Flex Grow - defines growth factor */
+      /* 0 (default) means no growth, 1+ means proportional growth */
+      flex-grow: 1;
+      
+      /* Flex Shrink - defines shrink factor */
+      /* 1 (default) means can shrink, 0 means no shrinking */
+      flex-shrink: 1;
+      
+      /* Flex Basis - defines initial size before free space is distributed */
+      /* auto (default), length values, percentages */
+      flex-basis: 120px;
+      
+      /* Flex - shorthand for grow, shrink, and basis */
+      /* flex: 1 1 120px; */ /* grow shrink basis */
+      
+      /* Align Self - overrides align-items for this item */
+      /* auto (default), flex-start, flex-end, center, baseline, stretch */
+      align-self: auto;
+      
+      /* Order - controls visual order without changing HTML */
+      /* 0 (default), positive or negative integers */
+      /* order: 0; */
+      
+      /* Item Styling */
+      background: lightblue;
+      padding: 15px;
+      text-align: center;
+      border: 2px solid #666;
+      border-radius: 8px;
+      /* Minimum width to prevent items from becoming too small */
+      min-width: 80px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .flex-item:last-child {
+      background-color: rgb(255, 0, 0);
+    }
+
+.title{
+  text-align: center;
+}
+
+  </style>
+  </style>
+</head>
+<body>
+<h1 class="title">Flex Box</h1>
+  <div class="flex-container">
+    <div class="flex-item">
+ 
+    </div>
+    <div class="flex-item">
+     
+    </div>
+    <div class="flex-item">
+     
+    </div>
+    <div class="flex-item">
+     
+    </div>
+    <div class="flex-item">
+    
+    </div>
+    <div class="flex-item">
+     
+    </div>
+  </div>
+  
+ 
+</body>
+</html>
+
+
+
+
+       <!--.flex-item:nth-child(even) {
+      background-color: yellow;  -->
+
+
+       <!--  .flex-item:nth-child(odd) {
+      background-color: rgb(255, 0, 0);
+    } -->
+

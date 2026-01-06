@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id": "5fdc",
+      "username": "sivaji",
+      "email": "sivaji@gmail.com",
+      "password": "sivaji@143",
+      "role": "admin"
+    }
+  ]
+}
